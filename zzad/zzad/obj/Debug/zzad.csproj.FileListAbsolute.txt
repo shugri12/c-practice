@@ -1,0 +1,11 @@
+C:\Users\PC\Downloads\zzad\zzad\bin\Debug\zzad.exe.config
+C:\Users\PC\Downloads\zzad\zzad\bin\Debug\zzad.exe
+C:\Users\PC\Downloads\zzad\zzad\bin\Debug\zzad.pdb
+C:\Users\PC\Downloads\zzad\zzad\obj\Debug\zzad.csproj.AssemblyReference.cache
+C:\Users\PC\Downloads\zzad\zzad\obj\Debug\zzad.Form1.resources
+C:\Users\PC\Downloads\zzad\zzad\obj\Debug\zzad.Properties.Resources.resources
+C:\Users\PC\Downloads\zzad\zzad\obj\Debug\zzad.csproj.GenerateResource.cache
+C:\Users\PC\Downloads\zzad\zzad\obj\Debug\zzad.csproj.CoreCompileInputs.cache
+C:\Users\PC\Downloads\zzad\zzad\obj\Debug\zzad.exe
+C:\Users\PC\Downloads\zzad\zzad\obj\Debug\zzad.pdb
+C:\Users\PC\Downloads\zzad\zzad\obj\Debug\zzad.exe.config
