@@ -1,0 +1,11 @@
+C:\Users\PC\Downloads\regitrationfeesystem\regitrationfeesystem\bin\Debug\regitrationfeesystem.exe.config
+C:\Users\PC\Downloads\regitrationfeesystem\regitrationfeesystem\bin\Debug\regitrationfeesystem.exe
+C:\Users\PC\Downloads\regitrationfeesystem\regitrationfeesystem\bin\Debug\regitrationfeesystem.pdb
+C:\Users\PC\Downloads\regitrationfeesystem\regitrationfeesystem\obj\Debug\regitrationfeesystem.csproj.AssemblyReference.cache
+C:\Users\PC\Downloads\regitrationfeesystem\regitrationfeesystem\obj\Debug\regitrationfeesystem.Form1.resources
+C:\Users\PC\Downloads\regitrationfeesystem\regitrationfeesystem\obj\Debug\regitrationfeesystem.Properties.Resources.resources
+C:\Users\PC\Downloads\regitrationfeesystem\regitrationfeesystem\obj\Debug\regitrationfeesystem.csproj.GenerateResource.cache
+C:\Users\PC\Downloads\regitrationfeesystem\regitrationfeesystem\obj\Debug\regitrationfeesystem.csproj.CoreCompileInputs.cache
+C:\Users\PC\Downloads\regitrationfeesystem\regitrationfeesystem\obj\Debug\regitrationfeesystem.exe
+C:\Users\PC\Downloads\regitrationfeesystem\regitrationfeesystem\obj\Debug\regitrationfeesystem.pdb
+C:\Users\PC\Downloads\regitrationfeesystem\regitrationfeesystem\obj\Debug\regitrationfeesystem.exe.config
