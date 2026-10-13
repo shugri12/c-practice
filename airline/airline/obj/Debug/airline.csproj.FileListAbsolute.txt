@@ -1,0 +1,11 @@
+C:\Users\PC\Downloads\airline\airline\bin\Debug\airline.exe.config
+C:\Users\PC\Downloads\airline\airline\bin\Debug\airline.exe
+C:\Users\PC\Downloads\airline\airline\bin\Debug\airline.pdb
+C:\Users\PC\Downloads\airline\airline\obj\Debug\airline.csproj.AssemblyReference.cache
+C:\Users\PC\Downloads\airline\airline\obj\Debug\airline.Form1.resources
+C:\Users\PC\Downloads\airline\airline\obj\Debug\airline.Properties.Resources.resources
+C:\Users\PC\Downloads\airline\airline\obj\Debug\airline.csproj.GenerateResource.cache
+C:\Users\PC\Downloads\airline\airline\obj\Debug\airline.csproj.CoreCompileInputs.cache
+C:\Users\PC\Downloads\airline\airline\obj\Debug\airline.exe
+C:\Users\PC\Downloads\airline\airline\obj\Debug\airline.pdb
+C:\Users\PC\Downloads\airline\airline\obj\Debug\airline.exe.config
