@@ -1,0 +1,11 @@
+C:\Users\PC\Downloads\labkakore\labkakore\bin\Debug\labkakore.exe.config
+C:\Users\PC\Downloads\labkakore\labkakore\bin\Debug\labkakore.exe
+C:\Users\PC\Downloads\labkakore\labkakore\bin\Debug\labkakore.pdb
+C:\Users\PC\Downloads\labkakore\labkakore\obj\Debug\labkakore.csproj.AssemblyReference.cache
+C:\Users\PC\Downloads\labkakore\labkakore\obj\Debug\labkakore.Form1.resources
+C:\Users\PC\Downloads\labkakore\labkakore\obj\Debug\labkakore.Properties.Resources.resources
+C:\Users\PC\Downloads\labkakore\labkakore\obj\Debug\labkakore.csproj.GenerateResource.cache
+C:\Users\PC\Downloads\labkakore\labkakore\obj\Debug\labkakore.csproj.CoreCompileInputs.cache
+C:\Users\PC\Downloads\labkakore\labkakore\obj\Debug\labkakore.exe
+C:\Users\PC\Downloads\labkakore\labkakore\obj\Debug\labkakore.pdb
+C:\Users\PC\Downloads\labkakore\labkakore\obj\Debug\labkakore.exe.config
