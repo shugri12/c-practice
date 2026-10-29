@@ -1,0 +1,11 @@
+C:\Users\PC\Downloads\asementifile3\asementifile3\bin\Debug\asementifile3.exe.config
+C:\Users\PC\Downloads\asementifile3\asementifile3\bin\Debug\asementifile3.exe
+C:\Users\PC\Downloads\asementifile3\asementifile3\bin\Debug\asementifile3.pdb
+C:\Users\PC\Downloads\asementifile3\asementifile3\obj\Debug\asementifile3.csproj.AssemblyReference.cache
+C:\Users\PC\Downloads\asementifile3\asementifile3\obj\Debug\asementifile3.Form1.resources
+C:\Users\PC\Downloads\asementifile3\asementifile3\obj\Debug\asementifile3.Properties.Resources.resources
+C:\Users\PC\Downloads\asementifile3\asementifile3\obj\Debug\asementifile3.csproj.GenerateResource.cache
+C:\Users\PC\Downloads\asementifile3\asementifile3\obj\Debug\asementifile3.csproj.CoreCompileInputs.cache
+C:\Users\PC\Downloads\asementifile3\asementifile3\obj\Debug\asementifile3.exe
+C:\Users\PC\Downloads\asementifile3\asementifile3\obj\Debug\asementifile3.pdb
+C:\Users\PC\Downloads\asementifile3\asementifile3\obj\Debug\asementifile3.exe.config

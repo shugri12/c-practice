@@ -1,0 +1,79 @@
+//other function1
+using: Closes the file automatically when reading is finished.
+StreamReader read: Creates a StreamReader object named read to read 
+data from a file.
+new StreamReader("c#test"): Opens the file named c#test for reading.
+while (read.Peek() != -1): Checks whether
+ there is still data left to read in the file. 
+-1 means the end of the file has been reached.
+read.ReadLine(): Reads one line from the file.
+listBox1.Items.Add(read.ReadLine()): 
+Adds each line from the file to the ListBox so the user can see it.
+Short explanation for your teacher
+“This program reads a file line by line using StreamReader.
+ The Peek method checks whether the end of the file has been reached,
+ and ReadLine reads each line. The Items.Add method displays
+  each line in the ListBox.
+  The using statement closes the file automatically
+   when reading is finished.”
+
+   // other function2
+
+ byte[] xog = File.ReadAllBytes("c#test");
+Reads all the bytes from 
+the file named c#test and stores them in a byte array called xog.
+2. MessageBox.Show("tirada byte-yada" + xog.Length);
+Displays a message box showing the total number of bytes in the file.
+MessageBox.Show() displays a message.
+xog.Length returns the total number of bytes.
+3. foreach (byte b in xog)
+Loops through every byte stored in the array xog, one byte at a time.
+byte is a data type that stores a value from 0 to 255.
+b is the variable that holds each byte.
+xog is the array containing all the bytes.
+4. listBox1.Items.Add(b);
+Adds each byte to listBox1 so that it appears on the screen.
+Example
+If the file contains the text ABC, its bytes are:
+Character Byte value
+A 65
+B 66
+C 67
+The message box displays:
+tirada byte-yada 3
+The ListBox displays:
+Short explanation for your teacher
+
+
+This program reads all bytes from a file using File.ReadAllBytes().
+ It displays the total number of bytes using xog.Length. 
+The foreach loop goes through each byte, and listBox1.Items.Add(b) 
+displays every byte in the ListBox.
+
+// other function3
+
+ReadBlock in C#
+
+This program reads characters from a file using "StreamReader".
+
+1. "StreamReader" opens the file for reading.
+2. "char[] b = new char[16];" creates an array that can store 16 characters.
+3. "ReadBlock()" reads characters from the file and stores them in the array.
+4. "tiro" stores the number of characters read.
+5. "listBox1.Items.Add()" displays the characters in the ListBox.
+6. "using" automatically closes the file when reading is finished.
+
+Conclusion: This program reads up to 16 characters from a file and 
+displays them in a ListBox.
+// daleted file
+
+File Delete in C#
+
+This program checks whether a file exists and deletes it if it exists.
+
+- "File.Exists(del)": Checks if the file exists.
+- "File.Delete(del)": Deletes the file.
+- "MessageBox.Show()": Displays a message.
+
+Conclusion: The program checks the file and deletes it if it exists.
+
