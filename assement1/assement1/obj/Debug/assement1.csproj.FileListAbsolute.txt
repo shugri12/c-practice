@@ -1,0 +1,10 @@
+C:\Users\PC\source\repos\New folder\assement1\assement1\bin\Debug\assement1.exe.config
+C:\Users\PC\source\repos\New folder\assement1\assement1\bin\Debug\assement1.exe
+C:\Users\PC\source\repos\New folder\assement1\assement1\bin\Debug\assement1.pdb
+C:\Users\PC\source\repos\New folder\assement1\assement1\obj\Debug\assement1.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\New folder\assement1\assement1\obj\Debug\assement1.Form1.resources
+C:\Users\PC\source\repos\New folder\assement1\assement1\obj\Debug\assement1.Properties.Resources.resources
+C:\Users\PC\source\repos\New folder\assement1\assement1\obj\Debug\assement1.csproj.GenerateResource.cache
+C:\Users\PC\source\repos\New folder\assement1\assement1\obj\Debug\assement1.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\New folder\assement1\assement1\obj\Debug\assement1.exe
+C:\Users\PC\source\repos\New folder\assement1\assement1\obj\Debug\assement1.pdb
