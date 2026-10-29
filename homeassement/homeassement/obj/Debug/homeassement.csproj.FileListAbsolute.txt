@@ -1,0 +1,11 @@
+C:\Users\PC\Pictures\hom\homeassement\homeassement\bin\Debug\homeassement.exe.config
+C:\Users\PC\Pictures\hom\homeassement\homeassement\bin\Debug\homeassement.exe
+C:\Users\PC\Pictures\hom\homeassement\homeassement\bin\Debug\homeassement.pdb
+C:\Users\PC\Pictures\hom\homeassement\homeassement\obj\Debug\homeassement.csproj.AssemblyReference.cache
+C:\Users\PC\Pictures\hom\homeassement\homeassement\obj\Debug\homeassement.Form1.resources
+C:\Users\PC\Pictures\hom\homeassement\homeassement\obj\Debug\homeassement.Properties.Resources.resources
+C:\Users\PC\Pictures\hom\homeassement\homeassement\obj\Debug\homeassement.csproj.GenerateResource.cache
+C:\Users\PC\Pictures\hom\homeassement\homeassement\obj\Debug\homeassement.csproj.CoreCompileInputs.cache
+C:\Users\PC\Pictures\hom\homeassement\homeassement\obj\Debug\homeassement.exe
+C:\Users\PC\Pictures\hom\homeassement\homeassement\obj\Debug\homeassement.pdb
+C:\Users\PC\Pictures\hom\homeassement\homeassement\obj\Debug\homeassement.exe.config
