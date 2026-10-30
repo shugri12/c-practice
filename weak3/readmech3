@@ -1,0 +1,334 @@
+# Chapter 3 
+
+Study notes for *Starting Out with Visual C#* (Gaddis, 6th Edition), Chapter 3.
+These notes are a personal summary written for learning purposes.
+
+## Table of Contents
+
+1. [Decision Structures and the `if` Statement](#1-decision-structures-and-the-if-statement)
+2. [The `if-else` Statement](#2-the-if-else-statement)
+3. [Nested Decision Structures](#3-nested-decision-structures)
+4. [Logical Operators](#4-logical-operators)
+5. [`bool` Variables and Flags](#5-bool-variables-and-flags)
+6. [Comparing Strings](#6-comparing-strings)
+7. [Preventing Data Conversion Exceptions with `TryParse`](#7-preventing-data-conversion-exceptions-with-tryparse)
+8. [Input Validation](#8-input-validation)
+9. [Radio Buttons and Check Boxes](#9-radio-buttons-and-check-boxes)
+10. [The `switch` Statement](#10-the-switch-statement)
+11. [Introduction to List Boxes](#11-introduction-to-list-boxes)
+
+---
+
+## 1. Decision Structures and the `if` Statement
+
+- **Control structure**: a logical design that controls the order in which statements execute.
+- **Sequence structure**: statements run one after another in the order they appear.
+- **Decision (selection) structure**: statements run only if a certain condition exists.
+- A **single-alternative** decision structure has only one alternative path.
+
+```csharp
+if (expression)
+{
+    statement;
+    statement;
+}
+```
+
+The expression is a **Boolean expression** (evaluates to `true` or `false`).
+
+### Relational Operators
+
+| Operator | Meaning | Example | Question |
+|----------|---------|---------|----------|
+| `>`  | Greater than | `x > y`  | Is x greater than y? |
+| `<`  | Less than | `x < y`  | Is x less than y? |
+| `>=` | Greater than or equal to | `x >= y` | Is x greater than or equal to y? |
+| `<=` | Less than or equal to | `x <= y` | Is x less than or equal to y? |
+| `==` | Equal to | `x == y` | Is x equal to y? |
+| `!=` | Not equal to | `x != y` | Is x not equal to y? |
+
+```csharp
+if (sales > 50000)
+{
+    bonus = 500;
+}
+```
+
+## 2. The `if-else` Statement
+
+Executes one block if the condition is `true`, and another block if it is `false`.
+It has two parts: the **if clause** and the **else clause**.
+
+```csharp
+if (expression)
+{
+    statements;
+}
+else
+{
+    statements;
+}
+```
+
+## 3. Nested Decision Structures
+
+**Nested** means one decision structure inside another. Used to test more than one condition.
+
+```csharp
+if (expression)
+{
+    if (expression)
+    {
+        statements;
+    }
+    else
+    {
+        statements;
+    }
+}
+else
+{
+    statements;
+}
+```
+
+**Example – loan qualification:** salary must be `>= 40000` AND years on job `>= 2`.
+
+### The `if-else-if` Statement
+
+Evaluates multiple conditions in order; the first true one runs.
+
+```csharp
+if (expression)
+{
+    statements;
+}
+else if (expression)
+{
+    statements;
+}
+else
+{
+    statements;
+}
+```
+
+## 4. Logical Operators
+
+Used to build **compound expressions** from multiple Boolean expressions.
+
+| Operator | Name | Meaning |
+|----------|------|---------|
+| `&&` | AND | Both sub-expressions must be true |
+| `\|\|` | OR | One or both sub-expressions must be true |
+| `!`  | NOT | Reverses the truth value |
+
+```csharp
+// AND
+if (temperature < 20 && minutes > 12)
+{
+    MessageBox.Show("The temperature is in the danger zone.");
+}
+
+// OR
+if (temperature < 20 || temperature > 100)
+{
+    MessageBox.Show("The temperature is in the danger zone.");
+}
+
+// NOT
+if (!(temperature > 100))
+{
+    MessageBox.Show("The temperature is below the maximum.");
+}
+```
+
+## 5. `bool` Variables and Flags
+
+- A `bool` variable stores `true` or `false`.
+- A **flag** is a `bool` variable that signals whether some condition exists in the program.
+  - `false` → the condition does **not** exist
+  - `true` → the condition **exists**
+
+## 6. Comparing Strings
+
+```csharp
+// == operator
+if (name1 == name2) { }
+
+// Compare with a string literal
+if (name1 != "bob") { }
+
+// String.Compare method (returns 0 when equal)
+if (String.Compare(name1, name2) == 0) { }
+```
+
+## 7. Preventing Data Conversion Exceptions with `TryParse`
+
+Exceptions should be prevented when possible. `TryParse` methods avoid exceptions caused by invalid user input:
+
+- `int.TryParse`
+- `double.TryParse`
+- `decimal.TryParse`
+
+```csharp
+dataType.TryParse(string input, out targetVariable)
+```
+
+- Returns `true` if the conversion succeeds, `false` otherwise.
+- The `out` keyword is **required**: it marks `targetVariable` as an output variable.
+
+## 8. Input Validation
+
+**Input validation** = inspecting data entered into a program to make sure it is valid *before* it is used.
+
+> `TryParse` only checks that the input **is a number**; it does **not** check that the number makes sense (data integrity).
+> Example: `999` hours/week parses fine but is not realistic.
+
+```csharp
+int hours;
+if (int.TryParse(textBox1.Text, out hours))
+{
+    if (hours > 0 && hours <= 168)
+    {
+        // valid
+    }
+}
+
+// Test scores must be in range 0–100
+if (testScore >= 0 && testScore <= 100) { }
+```
+
+## 9. Radio Buttons and Check Boxes
+
+| Control | Selection | Notes |
+|---------|-----------|-------|
+| **RadioButton** | One choice from several | Mutually exclusive: selecting one deselects the others |
+| **CheckBox** | Multiple options | Each box is independent (true/false, yes/no) |
+
+**Common properties**
+
+- `Text` – text displayed next to the control
+- `Checked` – `bool`; whether the control is selected
+
+```csharp
+if (choiceRadioButton.Checked) { } else { }
+if (option1CheckBox.Checked)   { } else { }
+
+// Equivalent (== true is not necessary)
+if (choiceRadioButton.Checked == true) { }
+```
+
+### The `CheckedChanged` Event
+
+Raised whenever the `Checked` property of a RadioButton or CheckBox changes.
+Double-click the control in the Designer to generate the handler:
+
+```csharp
+private void yellowRadioButton_CheckedChanged(object sender, EventArgs e)
+{
+}
+```
+
+## 10. The `switch` Statement
+
+A **multiple-alternative** decision structure. The value of a variable/expression decides which path runs. It can replace an `if-else-if` that tests the same variable against several values.
+
+```csharp
+switch (testExpression)
+{
+    case value_1:
+        statement;
+        break;
+    case value_2:
+        statement;
+        break;
+    default:
+        statement;
+        break;
+}
+```
+
+- `testExpression` can be an `int`, `string`, or `bool` value.
+- Each `case` holds one or more statements and ends with `break`.
+- `default` is **optional**; it runs when no case matches.
+
+## 11. Introduction to List Boxes
+
+A **ListBox** displays a list of items and lets the user select one.
+
+### Common Properties
+
+| Property | Description |
+|----------|-------------|
+| `Text` | Text of the currently selected item (`string`) |
+| `Items` | The collection of items in the ListBox |
+| `Items.Count` | Total number of items |
+| `SelectedItem` | The currently selected item (`object`) |
+| `SelectedIndex` | Zero-based index of the selected item (`-1` if none) |
+
+```csharp
+selectedFruit = fruitListBox.SelectedItem.ToString();
+```
+
+### Adding Items
+
+```csharp
+daysListBox.Items.Add("Monday");
+daysListBox.Items.Add("Tuesday");
+daysListBox.Items.Add("Wednesday");
+```
+
+### Selected Item & Index
+
+- Index starts at **0**: the first item is `0`, the *n*th item is `n - 1`.
+- Reading `SelectedItem` when nothing is selected causes an **exception**.
+- Always check first:
+
+```csharp
+if (fruitListBox.SelectedIndex != -1)
+{
+    selectedFruit = fruitListBox.SelectedItem.ToString();
+}
+```
+
+### `Text` vs `SelectedItem`
+
+| Feature | `Text` | `SelectedItem` |
+|---------|--------|----------------|
+| Type | `string` | `object` |
+| Use case | Quick access to selected text | Full access to the selected item |
+| Flexibility | Less flexible | More flexible (can be cast) |
+| Nothing selected | Returns `""` | Returns `null` |
+| Best for | Simple text-only lists | Complex or data-bound lists (e.g., `Student`, `Book` objects) |
+
+### Removing Items
+
+```csharp
+daysListBox.Items.Remove("Tuesday");   // remove a specific item
+daysListBox.Items.RemoveAt(2);         // remove item at index 2
+daysListBox.Items.Clear();             // remove all items
+```
+
+> `RemoveAt` throws an exception if the index is `< 0` or `>= Items.Count`.
+
+---
+
+## Quick Summary
+
+| Need | Use |
+|------|-----|
+| Run code only if a condition is true | `if` |
+| Choose between two paths | `if-else` |
+| Test several conditions in order | `if-else-if` |
+| Test a condition inside another | Nested `if` |
+| Combine conditions | `&&`, `\|\|`, `!` |
+| Many fixed values of one variable | `switch` |
+| Safe text → number conversion | `TryParse` |
+| Pick one option | RadioButton |
+| Pick many options | CheckBox |
+| Choose from a list | ListBox |
+
+## Reference
+
+Gaddis, T. *Starting Out with Visual C#*, 6th Edition. Pearson Education.

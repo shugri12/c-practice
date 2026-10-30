@@ -1,0 +1,224 @@
+Example 1: Temperature Checking
+
+This program uses an "if-else" statement to check the temperature.
+
+- If the temperature is greater than 40, it displays Hot.
+- Otherwise, it displays Cold.
+
+
+
+Example 2: Loan Qualification
+
+This program uses nested "if" statements to check whether a person qualifies for a loan.
+
+- Salary must be greater than 34,000.
+- Years on the job must be at least 9.
+- If both conditions are true, the person qualifies for the loan.
+- Otherwise, it displays the appropriate error message.
+
+
+ C# Grade Calculator
+
+This program uses "if", "else if", and "else" statements to calculate a student's grade based on their test score.
+
+- 90–100: Grade A
+- 80–89: Grade B
+- 70–79: Grade C
+- 60–69: Grade D
+- Below 60: Grade F
+
+The program reads the student's score from a TextBox and displays the corresponding grade.
+
+
+
+
+
+example3
+
+This program demonstrates the use of Logical Operators in C#.
+
+1. OR Operator (||): Checks two conditions. If at least one condition is true, the message is displayed.
+
+2. OR Operator (||): Checks the temperature and minutes again. If one condition is true, the message is displayed.
+
+3. NOT Operator (!): Reverses the result of a condition. If the condition is false, it becomes true.
+
+The program uses "||" and "!" to check different conditions and display messages.
+
+
+
+
+EXAMPLE4
+
+This program demonstrates different ways to compare strings in C#.
+
+1. Equality Operator (==): Checks whether two strings are equal.
+2. Not Equal Operator (!=): Checks whether two strings are different.
+3. String.Compare(): Compares two strings and returns 0 if they are equal.
+4. CompareTo(): Compares two strings and returns 0 if they are equal.
+
+The program uses different comparison methods to check whether two names are the same or different.
+
+
+
+
+
+
+
+
+
+EXAMPLE 5 C# Switch Statement
+
+This program uses a "switch" statement to check the user's choice.
+
+- It reads two numbers from TextBoxes.
+- The "switch" statement checks the value of the choice.
+- If the choice is 1, it displays the two numbers in Label.
+- The "break" statement stops the execution of the switch case.
+- The "default" case displays "Invalid choice" if the choice does not match any case.
+
+The program demonstrates how to use "switch", "case", "break", and "default" in C#.
+
+
+
+
+
+
+
+
+ EXAMPLE 6 C# Try-Catch and Average Calculator
+
+This program uses "try-catch" to calculate the average of three test scores and handle errors.
+
+- It reads three test scores from TextBoxes.
+- It calculates the average of the three tests.
+- It displays the result with one decimal place using "ToString("N1")".
+- If the average is greater than 96, it displays a congratulation message.
+- The "catch" block handles errors and displays an error message if invalid input is entered.
+
+The program demonstrates "try-catch", exception handling, and average calculation in C#.
+
+
+
+
+
+
+
+ EXAMPLE7 C# ListBox Selected Item
+
+This program uses a "ListBox" to get the text selected by the user.
+
+- It reads the selected text from the "ListBox".
+- It stores the selected text in a variable called "selectedtext".
+- It uses "MessageBox.Show()" to display the selected text.
+
+This program demonstrates how to get and display a selected item from a "ListBox" in C#.
+
+
+
+
+
+
+
+
+EXAMPLE 8 C# Adding Items to ListBox
+
+This program uses "ListBox.Items.Add()" to add items to a ListBox.
+
+- It adds Monday to the ListBox.
+- It adds Sunday to the ListBox.
+- It adds Wednesday to the ListBox.
+
+The program demonstrates how to add multiple items to a ListBox using C#.
+
+
+
+
+EXAMPLE 9 C# Remove Selected Item from ListBox
+
+This program uses "ListBox" to remove an item selected by the user.
+
+- It checks whether an item is selected using "SelectedIndex".
+- If an item is selected, "RemoveAt()" removes it from the ListBox.
+- If no item is selected, "MessageBox.Show()" displays a message asking the user to select an item.
+
+The program demonstrates how to select and remove items from a ListBox using C#.
+
+
+EXAMPLE 10 C# Nested If Statement
+
+This program uses nested "if-else" statements to check a person's eligibility.
+
+- It checks whether the person's age is greater than 18.
+- If the age is valid, it checks whether the mark is 50 or above.
+- If both conditions are true, it displays "You are eligible".
+- If the mark is below 50, it displays "You failed".
+- If the age is 18 or below, it displays "Age is not allowed".
+
+The program demonstrates how to use nested "if-else" statements to check multiple conditions in C#.
+
+
+
+
+
+
+
+
+EAXMPLE 11– C# Boolean and TryParse
+
+This program demonstrates the use of Boolean variables and the "int.TryParse()" method in C#.
+
+Example 1: Boolean
+
+- It creates a Boolean variable called "approved" with the value "true".
+- If the value is true, it displays "Approved".
+- Otherwise, it displays "Not Approved".
+
+Example 2: TryParse
+
+- It uses "int.TryParse()" to convert TextBox input into an integer.
+- If the input is a valid number, it displays "Valid Number".
+- If the input is invalid, it displays "Invalid Input".
+
+The program demonstrates how to use Boolean conditions and validate user input in C#.
+
+
+
+EXAMPLE12– C# TryParse
+
+This program uses the "int.TryParse()" method to validate user input.
+
+- It reads input from a TextBox.
+- It uses "int.TryParse()" to convert the input into an integer.
+- If the input is a valid number, it displays "Valid Number".
+- If the input is not a valid number, it displays "Invalid Input".
+
+The program demonstrates how to validate user input and prevent errors when converting text into integers in C#.
+
+
+
+
+
+EXMPLE 13 – C# RadioButton
+
+This program uses "RadioButton" to allow the user to select an option.
+
+- It checks whether the first RadioButton is selected.
+- If selected, it displays "Male".
+- The "else if" statement checks another selection.
+- It displays the selected gender using "MessageBox.Show()".
+
+The program demonstrates how to use RadioButton and the "Checked" property in C#.
+
+
+
+EAXMPLE 14 – C# CheckBox
+
+This program uses a "CheckBox" to check whether the user has selected an option.
+
+- It checks whether "checkBox1" is selected using the "Checked" property.
+- If the CheckBox is checked, it displays "Your selected".
+- If the CheckBox is not checked, it displays "You did not select Java".
+
+The program demonstrates how to use CheckBox and the "Checked" property in C#.
+
