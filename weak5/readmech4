@@ -1,0 +1,139 @@
+Chapter 5: 
+
+1. Using Files for Data Storage
+
+Files are used to save data for later use.
+
+There are three steps:
+
+1. Open the file.
+2. Process the file (Read or Write).
+3. Close the file.
+
+There are two types of files:
+
+- Text File: Stores data as text.
+- Binary File: Stores data in binary format.
+
+2. File Accessing
+
+C# provides two important classes:
+
+- StreamWriter: Used to write data into a text file.
+- StreamReader: Used to read data from a text file.
+
+3. Writing Data to a File
+
+We use StreamWriter to write information into a file.
+
+Example:
+
+StreamWriter outputFile;
+outputFile = File.CreateText("courses.txt");
+
+outputFile.WriteLine("Java");
+outputFile.WriteLine("C#");
+outputFile.WriteLine("Python");
+
+outputFile.Close();
+
+- "CreateText()" creates a new file or replaces existing content.
+- "WriteLine()" writes data and moves to a new line.
+- "Write()" writes data without moving to a new line.
+- "Close()" closes the file.
+
+4. CreateText vs AppendText
+
+- CreateText(): Creates a file and removes old content if the file already exists.
+- AppendText(): Adds new data without deleting existing content.
+
+Example:
+
+StreamWriter outputFile;
+outputFile = File.AppendText("Names.txt");
+
+outputFile.WriteLine("Ali");
+outputFile.WriteLine("Ahmed");
+
+outputFile.Close();
+
+5. Reading Data from a File
+
+We use StreamReader to read information from a file.
+
+Important methods:
+
+- "ReadLine()" reads one line.
+- "Read()" reads characters.
+- "ReadToEnd()" reads all remaining content.
+- "Close()" closes the file.
+
+Example:
+
+StreamReader inputFile;
+inputFile = File.OpenText("students.txt");
+
+string line = inputFile.ReadLine();
+
+listBox1.Items.Add(line);
+
+inputFile.Close();
+
+6. Reading a File with a Loop
+
+We use "EndOfStream" to check whether the file has reached the end.
+
+Example:
+
+StreamReader inputFile;
+inputFile = File.OpenText("students.txt");
+
+while (!inputFile.EndOfStream)
+{
+    listBox1.Items.Add(inputFile.ReadLine());
+}
+
+inputFile.Close();
+
+7. OpenFileDialog and SaveFileDialog
+
+These controls display Windows dialog boxes.
+
+- OpenFileDialog: Allows the user to select and open a file.
+- SaveFileDialog: Allows the user to choose where to save a file.
+
+They are invisible controls and appear in the Component Tray.
+
+8. ShowDialog() and DialogResult
+
+- "ShowDialog()" displays the dialog box.
+- "DialogResult.OK" means the user clicked OK.
+- "DialogResult.Cancel" means the user clicked Cancel.
+
+Example:
+
+if (openFileDialog.ShowDialog() == DialogResult.OK)
+{
+    MessageBox.Show("File selected");
+}
+else
+{
+    MessageBox.Show("Cancelled");
+}
+
+9. Filename and InitialDirectory
+
+- Filename: Gets the selected file path and filename.
+- InitialDirectory: Specifies the folder displayed first.
+
+Example:
+
+openFileDialog.InitialDirectory = @"C:\Data";
+
+if (openFileDialog.ShowDialog() == DialogResult.OK)
+{
+    StreamReader inputFile =
+        File.OpenText(openFileDialog.FileName);
+
+    inputFile.Close();
+}

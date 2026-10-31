@@ -1,0 +1,349 @@
+
+//save dynamic
+This program demonstrates how to create and save a text file in C# using StreamWriter and SaveFileDialog.
+
+Source Code
+csharp
+// Example of creating a new file
+
+StreamWriter writer;
+DialogResult result;
+
+result = saveFileDialog1.ShowDialog();
+
+if (result == DialogResult.OK) // Save
+{
+    // Dynamic
+    writer = File.CreateText("c##.text");
+
+    // writer = File.CreateText(saveFileDialog1.FileName);
+
+    writer.WriteLine("shukri cabdullahi mohamud");
+    writer.WriteLine("zada cabdullahi moxamud");
+
+    writer.Close();
+}
+else if (result == DialogResult.Cancel)
+{
+    MessageBox.Show("not saved");
+}
+
+Explanation
+StreamWriter writer;
+Declares a StreamWriter variable used to write text into a file.
+DialogResult result;
+Declares a variable to store the result of the SaveFileDialog.
+saveFileDialog1.ShowDialog();
+Opens the Save File Dialog window.
+if (result == DialogResult.OK)
+Checks whether the user clicks the Save button.
+File.CreateText("c##.text");
+Creates a new text file named c##.text.
+writer.WriteLine();
+Writes text into the file. Each WriteLine creates a new line.
+writer.Close();
+Closes the file after writing.
+else if (result == DialogResult.Cancel)
+Checks whether the user cancels the save operation.
+MessageBox.Show("not saved");
+Displays a message when the user cancels.
+Output
+
+If the user clicks Save, the file contains:
+
+text
+shukri cabdullahi mohamud
+zada cabdullahi moxamud
+
+
+If the user clicks Cancel, a MessageBox displays:
+
+not saved
+
+Important Note
+
+To save the file in the location selected by the user, use:
+
+csharp
+writer = File.CreateText(saveFileDialog1.FileName);
+
+
+Instead of:
+
+csharp
+writer = File.CreateText("c##.text");
+
+
+Also, use using System.IO; at the top of your C# file.
+
+Conclusion
+StreamWriter writes text into a file.
+SaveFileDialog allows the user to choose where to save.
+DialogResult.OK confirms saving.
+DialogResult.Cancel cancels saving.
+WriteLine() writes text into a new line.
+Close() closes the file.
+
+
+// save static
+
+C# Create and Save a Text File
+Description
+
+This program demonstrates how to create and save a text file using StreamWriter and SaveFileDialog in C#.
+
+The user can choose the file name and location before saving.
+
+Source Code
+csharp
+// Example of creating a new file
+
+StreamWriter writer;
+DialogResult result;
+
+result = saveFileDialog1.ShowDialog();
+
+if (result == DialogResult.OK) // Save
+{
+    // Dynamic
+    // writer = File.CreateText("c##.text");
+
+    writer = File.CreateText(saveFileDialog1.FileName);
+
+    writer.WriteLine("shukri cabdullahi mohamud");
+    writer.WriteLine("zada cabdullahi moxamud");
+
+    writer.Close();
+}
+else if (result == DialogResult.Cancel)
+{
+    MessageBox.Show("not saved");
+}
+
+Explanation
+StreamWriter writer;
+Declares a StreamWriter variable used to write data into a text file.
+DialogResult result;
+Declares a variable to store the result of the dialog box.
+saveFileDialog1.ShowDialog();
+Opens the Save File Dialog window.
+if (result == DialogResult.OK)
+Checks whether the user clicks the Save button.
+File.CreateText(saveFileDialog1.FileName);
+Creates a text file using the file name and location selected by the user.
+writer.WriteLine();
+Writes text into the file. Each WriteLine writes on a new line.
+writer.Close();
+Closes the file after writing.
+else if (result == DialogResult.Cancel)
+Checks whether the user cancels the save operation.
+MessageBox.Show("not saved");
+Displays a message saying "not saved" when the user cancels.
+Output
+
+When the user clicks Save, the text file contains:
+text
+shukri cabdullahi mohamud
+zada cabdullahi moxamud
+
+When the user clicks Cancel, a MessageBox displays:
+not saved
+Important Note
+The following line:
+csharp
+writer = File.CreateText(saveFileDialog1.FileName);
+Saves the file in the location selected by the user.
+
+The commented-out line:csharp
+// writer = File.CreateText("c##.text");
+Would create a file using a fixed file name instead.
+
+Conclusion
+StreamWriter is used to write text into a file.
+SaveFileDialog allows the user to choose a file name and location.
+DialogResult.OK means the user confirms saving.
+DialogResult.Cancel means the user cancels saving.
+WriteLine() writes text into a new line.
+Close() closes the file.
+
+// raed
+This program demonstrates how to read data from a text file using StreamReader and display the contents in a ListBox in C#.
+
+Source Code
+
+csharp
+StreamReader reader;
+
+reader = File.OpenText("C:\\Users\\PC\\Downloads\\ex\\ex\\bin\\Debug\\c##.text");
+
+while (reader.EndOfStream == false)
+{
+    string line = reader.ReadLine();
+    listBox1.Items.Add(line);
+    reader.Close();
+}
+Explanation
+StreamReader reader;
+Declares a StreamReader variable used to read text from a file.
+File.OpenText()
+Opens the specified text file for reading.
+while (reader.EndOfStream == false)
+Checks whether the file has reached its end. If false, the loop continues.
+string line = reader.ReadLine();
+Reads one line of text from the file.
+listBox1.Items.Add(line);
+Adds the read text into the ListBox.
+reader.Close();
+Closes the file after reading.
+Output
+The contents of the text file will be displayed
+ inside listBox1, one line at a time
+ //appand
+ C# Append Text to File Example
+Description
+
+This program demonstrates how to append (add) new text to an existing text file using StreamWriter and File.AppendText() in C#.
+
+Source Code
+csharp
+// Append
+
+StreamWriter writer = File.AppendText("c##.text");
+
+writer.WriteLine("jamal");
+writer.WriteLine("jamal");
+
+writer.Close();
+
+Explanation
+StreamWriter writer;
+Declares a StreamWriter variable used to write text into a file.
+File.AppendText("c##.text");
+Opens the existing text file and allows new text to be added at the end of the file.
+writer.WriteLine("jamal");
+Adds the word "jamal" to the file on a new line.
+writer.WriteLine("jamal");
+Adds the word "jamal" again on another new line.
+writer.Close();
+Closes the file after writing.
+Output
+
+The text file will contain the previous content plus the new lines:
+
+text
+shukri cabdullahi mohamud
+zada cabdullahi moxamud
+jamal
+jamal
+Important Note
+File.AppendText() adds new text at the end of an existing file without deleting its previous content.
+
+If the file does not exist, it creates a new file.
+Conclusion
+StreamWriter is used to write text into a file.
+File.AppendText() adds new content to the end of a file.
+WriteLine() writes text on a new line.
+Close() closes the file after writing.
+
+// careate new file
+
+StreamWriter outputfile;
+outputfile = File.CreateText("c##.txt");
+outputfile.WriteLine("CA242");
+outputfile.WriteLine("Jamhuriya University");
+outputfile.WriteLine("C# Programming");
+outputfile.Close();
+Explanation:
+- "StreamWriter": Writes data into a file.
+- "CreateText()": Creates a new text file.
+- "WriteLine()": Writes text on a new line.
+- "Close()": Closes the file.
+Output:
+CA242
+Jamhuriya University
+C# Programming
+Conclusion: This program creates a text file
+ and writes information into it using C#.
+
+ // open static
+DialogResult result;
+result = openFileDialog1.ShowDialog();
+if (result == DialogResult.OK)
+{ reads = File.OpenText(openFileDialog1.FileName);
+    string lines;
+    while (!reads.EndOfStream)
+    {
+        lines = reads.ReadLine();
+        listBox1.Items.Add(lines);
+    }reads.Close();
+}
+Explanation:
+- "StreamReader": Reads data from a file.
+- "OpenFileDialog": Allows the user to select a file.
+- "DialogResult.OK": Confirms file selection.
+- "File.OpenText()": Opens the selected file.
+- "ReadLine()": Reads one line.
+- "EndOfStream": Checks the end of the file.
+- "Items.Add()": Displays data in ListBox.
+- "Close()": Closes the file.
+Output: Displays file contents in ListBox, line by line.
+Conclusion: This program opens and reads a text file using StreamReader.
+// open dynamic
+C# Open and Read a Text File
+Description
+This program demonstrates how to open a text file using OpenFileDialog, read its contents using StreamReader, and display the information in a ListBox.
+StreamReader reads;
+DialogResult result;
+result = openFileDialog1.ShowDialog();
+// Check user selection
+if (result == DialogResult.OK)
+{
+    reads = File.OpenText("c##.text");
+
+    string lines;
+    while (reads.EndOfStream == false)
+    {
+        lines = reads.ReadLine();
+        listBox1.Items.Add(lines);
+    } reads.Close();
+}
+Explanation
+StreamReader reads;
+Declares a StreamReader variable used to read data from a text file.
+DialogResult result;
+Declares a variable to store the user's selection.
+openFileDialog1.ShowDialog();
+Opens the Open File Dialog window so the user can select a file.
+if (result == DialogResult.OK)
+Checks whether the user selects a file and clicks Open.
+File.OpenText("c##.text");
+Opens the specified text file for reading.
+string lines;
+Declares a string variable to store each line read from the file.
+while (reads.EndOfStream == false)
+Checks whether the file has reached its end. The loop continues while there is more text to read.
+reads.ReadLine();
+Reads one line of text from the file.
+listBox1.Items.Add(lines);
+Displays each line inside the ListBox.
+reads.Close();
+Closes the file after reading all its contents.
+Output
+The contents of the selected text file will appear inside listBox1, one line at a time.
+Example:
+text=ca242,jmahuriya universty,c# progaraming
+There is one improvement needed in the original code.
+reads = File.OpenText("c##.text");
+reads = File.OpenText(openFileDialog1.FileName);
+This allows the program to open the actual file selected by the user.
+reads.Close();
+After the while loop.//Conclusion
+StreamReader reads text from a file.
+OpenFileDialog allows the user to select a file.
+DialogResult.OK confirms the file selection.
+File.OpenText() opens a text file.
+ReadLine() reads one line at a time.
+EndOfStream checks whether the file has ended.
+Items.Add() displays text in a ListBox.
+Close() closes the file.
+
