@@ -1,0 +1,163 @@
+// while loop
+
+This program demonstrates how to use the while loop in C# to repeat
+ a block of code while a condition is true.
+
+Source Code
+csharp
+int count = 6;
+
+while (count < 5)
+{
+    MessageBox.Show("hello");
+    count = count + 1;
+}
+
+Explanation
+int count = 6;
+Declares an integer variable named count and initializes it with 6.
+while (count < 5)
+Checks whether the value of count is less than 5.
+MessageBox.Show("hello");
+Displays the message "hello" if the condition is true.
+count = count + 1;
+Increases the value of count by 1.
+Output
+
+No MessageBox will appear.
+
+This is because the initial value of count is 6, and 6 is not less than 5.
+
+Therefore, the while loop does not execute.
+
+Conclusion
+while repeats code as long as the condition is true.
+count = 6 sets the starting value.
+count < 5 is the loop condition.
+The loop executes zero times because the condition is false.
+
+// for loop
+
+
+This program demonstrates how to use the for loop in C# 
+to display the message "hello" multiple times.
+
+Source Code
+csharp
+int couunt;
+
+for (couunt = 0; couunt < 19; couunt++)
+{
+    MessageBox.Show("hello");
+}
+
+Explanation
+int couunt;
+Declares an integer variable named couunt.
+for (couunt = 0;
+Initializes the counter variable with 0.
+couunt < 19;
+Checks whether the counter is less than 19. If true, the loop continues.
+couunt++
+Increases the counter by 1 after each iteration.
+MessageBox.Show("hello");
+Displays the message "hello" in a MessageBox.
+Output
+
+The program displays the message:
+
+hello
+
+A total of 19 times in separate MessageBoxes.
+
+Conclusion
+for is used to repeat a block of code.
+couunt = 0 sets the starting value.
+couunt < 19 sets the loop condition.
+couunt++ increases the counter by 1.
+The loop stops when the counter reaches 19.
+// do while loop
+
+
+This program demonstrates how to use the do-while loop in C#
+ to display numbers from 1 to 6 using MessageBox.
+
+Source Code
+csharp
+int num = 1;
+
+do
+{
+    MessageBox.Show(num.ToString());
+    num++;
+
+} while (num < 7);
+
+Explanation
+int num = 1;
+Declares an integer variable named num and initializes it with 1.
+do
+Starts the do-while loop.
+MessageBox.Show(num.ToString());
+Displays the current value of num in a MessageBox.
+num++;
+Increases the value of num by 1.
+while (num < 7);
+Checks whether num is less than 7. If true, the loop continues. If false, the loop stops.
+Output
+
+The program displays these numbers in separate MessageBoxes:
+
+1
+2
+3
+4
+5
+6
+Conclusion
+do-while executes the code before checking the condition.
+num++ increases the number by 1.
+The loop stops when num reaches 7.
+A do-while loop executes at least once.
+
+
+// increment and decrement
+
+
+This program demonstrates how to use the increment (++) and d
+ecrement (--) operators in C#.
+
+Source Code
+csharp
+int number = 5;
+
+number++;
+
+MessageBox.Show(number.ToString());
+
+number--;
+
+MessageBox.Show(number.ToString());
+
+Explanation
+int number = 5;
+Creates an integer variable named number and assigns it the value 5.
+number++;
+Increases the value of number by 1. The new value is 6.
+MessageBox.Show(number.ToString());
+Displays the value 6 in a message box.
+number--;
+Decreases the value of number by 1. The new value is 5.
+MessageBox.Show(number.ToString());
+Displays the value 5 in a message box.
+Output
+First MessageBox: 6
+Second MessageBox: 5
+Conclusion
+++ means Increment (Add 1).
+-- means Decrement (Subtract 1).
+ToString() converts a number into a string.
+
+
+
+
